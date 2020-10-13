@@ -1,0 +1,189 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,sans]{moderncv}        % possible options include font size ('10pt', '11pt' and '12pt'), paper size ('a4paper', 'letterpaper', 'a5paper', 'legalpaper', 'executivepaper' and 'landscape') and font family ('sans' and 'roman')
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+\moderncvicons{awesome}
+\moderncvcolor{blue}                               % color options 'black', 'blue' (default), 'burgundy', 'green', 'grey', 'orange', 'purple' and 'red'
+%\renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.77]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+\setlength{\makecvheadnamewidth}{7cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+% personal data
+\name{Yuxing}{Chen}
+%\title{Resumé title}
+\address{Vilppulantie 10 E 36}{00700 Helsinki}{Finland}
+\phone[fixed]{+358~46~9683918}                   % optional, remove / comment the line if not wanted; the optional "type" of the phone can be "mobile" (default), "fixed" or "fax"
+%\phone[fixed]{+2~(345)~678~901}
+%\phone[fax]{+3~(456)~789~012}
+\email{axinggu@gmail.com}                               % optional, remove / comment the line if not wanted
+% \social[github]{AxingguChen}                              % optional, remove / comment the line if not wanted
+\social[linkedin]{yuxingchen}
+
+% bibliography adjustements (only useful if you make citations in your resume, or print a list of publications using BibTeX)
+%   to show numerical labels in the bibliography (default is to show no labels)
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+\renewcommand*{\bibliographyitemlabel}{[\arabic{enumiv}]}
+%   to redefine the bibliography heading string ("Publications")
+%\renewcommand{\refname}{Articles}
+
+% bibliography with mutiple entries
+%\usepackage{multibib}
+%\newcites{book,misc}{{Books},{Others}}
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+\section{Research interests}
+
+\cvlistdoubleitem{Big data management}{Database systems}
+% \cvlistdoubleitem{}{Worst-case optimal join}
+
+\section{Experiences}
+\cvitem{}{
+\begin{itemize}
+    \item Spark, Yarn, Parameter tuning, Worst-case optimal join, Python, K8S
+\end{itemize}
+}
+
+
+% \section{Other expertises}
+% \cvlistdoubleitem{Docker and Kubernetes}{Linux server administration}
+% \cvlistdoubleitem{game development}{reverse engineering}
+
+% \section{Programming skills}
+
+% \cvlistdoubleitem{Proficient: C$\#$, Java, Kotlin}{Knowledgeable:~PHP,~HTML/JS,~C++}
+
+% \section{Language skills}
+% \cvlistdoubleitem{Native: Chinese}{Proficient: English}
+
+
+\section{Education}
+\cventry{2017--2021 (expected)}{PhD}{University of Helsinki}{Finland}{}{Doctoral Student in Computer Science}
+\cventry{2014--2016}{MSc}{Politecnico di Milano}{Italy}{}{Master in Computer Science and Engineering}
+\cventry{2010--2014}{BSc}{Guangdong University of Technology}{China}{}{Bachelor in Information and Computing Science}
+
+
+
+\section{Projects}
+
+
+\cventry{2020--2021}{Multi-model data processing (funded by the Oracle)}{}{}{}{
+\begin{itemize}
+    \item benchmark and process large scale multi-model data (tabular, JSON, XML, etc);
+    \item Perform efficient data integration or joining to connect meaningful information;
+    \item Keywords: data benchmarking, query processing, worst-case optimal join.
+\end{itemize}}
+
+\cventry{2017--2021}{Multi-model data processing (funded by the Academy of Finland )}{}{}{}{
+\begin{itemize}
+    \item benchmark and process large scale multi-model data (tabular, JSON, XML, etc);
+    \item Perform efficient data integration or joining to connect meaningful information;
+    \item Keywords: data benchmarking, query processing, worst-case optimal join.
+\end{itemize}}
+
+
+\cventry{2017--2019}{Optimization of big data platform (funded by Canada Huawei HIRP and Beijing Huawei)}{}{}{}{
+\begin{itemize}
+    \item Tune big data platforms (e.g., Hive, Hadoop, Spark, in Yarn/K8S);
+    \item Collect, process, and train log data to predict performance with larger cluster and dataset;
+    \item Keywords: cost-effective container/executor allocation in Yarn/K8S.
+\end{itemize}}
+
+
+
+\section{Publications}
+
+\cvitem{CSUR 2020}{Herodotos Herodotou, \textbf{Yuxing Chen}, Jiaheng Lu. A Survey on Automatic Parameter Tuning for Big Data Processing Systems. (accepted)}
+\cvitem{}{
+\begin{itemize}
+    \item Present main issues of the automatic parameter tuning problems, which are (i) large and complex parameter space; (ii) system scale and complexity; (iii) Lack of input data statistics;
+    \item Classify different methods to tune performance based on the available information;
+    \item Keywords: batch and stream processing, automatic parameter tuning.
+\end{itemize}
+}
+
+\cvitem{IEEE Trans. Big Data 2019}{\textbf{Yuxing Chen}, Peter Goetsch, Mohammad Hoque, Jiaheng Lu, Sasu Tarkoma. d-Simplexed: Adaptive Delaunay Triangulation for Performance Modeling and Prediction on Big Data Analytics. [\href{https://ieeexplore.ieee.org/document/8878273}{\underline{info}}]}
+\cvitem{}{
+\begin{itemize}
+    \item Build black box Delaney triangulation (piece-wise like linear regression) model to model the performance topology;
+    \item Baseline to traditional regressors, e.g., Decision tree, Gaussian process;
+    \item Keywords: Performance modeling, regression.
+\end{itemize}
+}
+
+
+\cvitem{CIKM 2019}{\textbf{Yuxing Chen}, Jiaheng Lu, Chen Chen, Mohammad Hoque, and Sasu Tarkoma. Cost-effective Resource Provisioning for Spark Workloads (short paper). [\href{https://dl.acm.org/doi/10.1145/3357384.3358090}{\underline{info}}]}
+\cvitem{}{
+\begin{itemize}
+    \item Train sample data and build while-box cost model to predict performance with larger cluster and dataset;
+    \item Keywords: cost-effective container/executor allocation in Yarn.
+\end{itemize}
+}
+
+
+\cvitem{Tutorial@VLDB 2019}{Jiaheng Lu, \textbf{Yuxing Chen}, Herodotos Herodotou, Shivnath Babu. Speedup Your Analytics: Automatic Parameter Tuning for Databases and Big Data Systems. [\href{https://dl.acm.org/doi/10.14778/3352063.3352112}{\underline{info}}]}
+\cvitem{}{
+\begin{itemize}
+    \item A tutorial presents the challenges of automatic parameter tuning;
+    \item Classify different methods to tune performance based on the available information;
+    \item Keywords: batch processing and database systems, automatic parameter tuning.
+\end{itemize}
+}
+
+\cvitem{TPCTC 2018}{Chao Zhang, Jiaheng Lu, Pengfei Xu, and \textbf{Yuxing Chen}. Unibench: A benchmark for multi-model database management systems. [\href{https://researchportal.helsinki.fi/en/publications/unibench-a-benchmark-for-multi-model-database-management-systems}{\underline{info}}]}
+\cvitem{}{
+\begin{itemize}
+    \item Design the data model (Social Commerce), the synthetic multi-model (JSON, XML, key-value, tabular, and graph) data generator, and a set of multi-model workloads; 
+    \item Test in ArangoDB and OrientDB;
+    \item Keywords: multi-model data and systems, benchmarking.
+\end{itemize}
+}
+
+
+\cvitem{SRC@SIGMOD 2018}{\textbf{Yuxing Chen}. Worst case optimal joins on relational and XML data. [\href{https://dl.acm.org/doi/abs/10.1145/3183713.3183721}{\underline{info}}]}
+\cvitem{}{
+\begin{itemize}
+    \item Abstract the join problem between tabular and XML data;
+    \item Keywords: multi-model data, worst-case optimal join.
+\end{itemize}
+}
+
+
+\section{Others}
+\cvitem{}{
+\begin{itemize}
+    \item Hiking, traveling, music, guitar, football
+\end{itemize}
+}
+
+
+\vfill
+
+\begin{center}
+    \textcolor{gray}{Last updated in March 2020.}
+\end{center}
+
+\end{document}
